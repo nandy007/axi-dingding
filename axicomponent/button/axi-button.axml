@@ -1,0 +1,12 @@
+<!--axicomponent/view/axi-button.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-button {{className||''}}" style="{{style||''}}" onTap="f">
+<button size="{{size}}" 
+  type="{{type}}"
+  plain="{{plain}}"
+  disabled="{{disabled}}" 
+  loading="{{loading}}"
+  hoverClass="{{hoverClass}}"
+  hoverStopPropagation="{{hoverStopPropagation}}"
+  hoverStartTime="{{hoverStartTime}}"
+  hoverStayTime="{{hoverStayTime}}" class="{{slotClass}}"><text style="color:{{textColor}};opacity:{{opacity}}">{{text}}</text></button>
+</view>

@@ -1,0 +1,14 @@
+<!--axicomponent/view/axi-button.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-progress {{className||''}}" style="border-radius:{{radius}}px;{{style||''}}" onTap="f">
+<progress 
+  showInfo="{{showInfo}}" 
+  borderRadius="{{borderRadius}}"
+  fontSize="{{fontSize}}"
+  strokeWidth="{{strokeWidth}}" 
+  activeColor="{{activeColor}}" 
+  backgroundColor="{{backgroundColor}}" 
+  active="{{active}}" 
+  activeMode="{{activeMode}}" 
+  percent="{{percent}}">
+</progress>
+</view>

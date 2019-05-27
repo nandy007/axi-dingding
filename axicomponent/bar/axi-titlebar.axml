@@ -1,0 +1,7 @@
+<!--axicomponent/bar/axi-titlebar.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-titlebar {{className||''}}" style="{{style||''}}" onTap="f">
+  <view>
+    <text style="color: {{color}}; font-size: {{size}}px;">{{title}}</text>
+    <text a:if="{{!hideLeftSide}}" class="axi-iconfont axi-icon-back" style="position:absolute;left:4px;color: {{color}}; font-size: {{size}}px;" catchTap="ontap"></text>
+  </view>
+</view>

@@ -1,0 +1,100 @@
+<!-- 小程序收藏组件，更多高级用法请参考文档：https://docs.alipay.com/mini/component/component-favorite -->
+<view class="rootBox">
+  <axi-titlebar title="power by agile"></axi-titlebar>
+  <axi-refresh onScrolltoupper="scroll" onPulldown="pulldown" class="{{cn}}" style="flex:1;padding-top:{{top}}px;">
+    <custom name="cname" id="cid" aaa="{{aaa}}" class1="{{ccc}}" class="{{ccc}}" onTap="click"></custom>
+    <custom name="cname" id="cid1" aaa="{{aaa}}" class1="{{ccc}}" class="{{ccc}}" onTap="click"></custom>
+    
+    <axi-icon type="info"></axi-icon>
+    <axi-icon type="warn"></axi-icon>
+    <axi-icon type="waiting"></axi-icon>
+    <axi-icon type="cancel"></axi-icon>
+    <axi-icon type="download"></axi-icon>
+    <axi-icon type="search"></axi-icon>
+    <axi-icon type="clear"></axi-icon>
+    <axi-icon type="success"></axi-icon>
+    <axi-icon type="success_no_circle"></axi-icon>
+
+    <view style="flex-direction:row;align-items:center;margin: 6px;">
+      <axi-progress onTap="clickProgress" style="flex:1;" onActiveend="activeend" percent="{{percent}}" borderRadius="6" strokeWidth="12" activeColor="red" backgroundColor="blue"></axi-progress>
+      <text>{{percent}}%</text>
+    </view>
+
+    <axi-rich-text nodes="{{nodeStr}}"></axi-rich-text>
+
+    <axi-button text="登录" type="primary"></axi-button>
+
+    <input name="ipt" value="{{iptVal}}"/>
+
+    <axi-input placeholder="请输入" v-model-text="iptVal" password="{{true}}"></axi-input>
+
+    <axi-textarea placeholder="你好" v-model-text="textarea"></axi-textarea>
+    <text>{{textarea}}</text>
+    <axi-label for="rd1">
+      <axi-radio id="rd1" name="rd" v-model-radio="rd" value="1"></axi-radio>
+      <text>第一个</text>
+    </axi-label>
+    <axi-label for="rd2">
+      <axi-radio id="rd2" name="rd" v-model-radio="rd" value="2"></axi-radio>
+      <text>第二个</text>
+    </axi-label>
+    <axi-label for="rd3">
+      <axi-radio id="rd3" name="rd" v-model-radio="rd" value="3"></axi-radio>
+      <text>第三个</text>
+    </axi-label>
+    <text>{{rd}}</text>
+
+    
+    <axi-label for="ck1">
+      <axi-checkbox id="ck1" value="1" v-model-checkbox="ck"></axi-checkbox>
+      <text>第一个</text>
+    </axi-label>
+
+    <axi-label for="ck2">
+      <axi-checkbox id="ck2" value="2" v-model-checkbox="ck"></axi-checkbox>
+      <text>第二个</text>
+    </axi-label>
+
+    <axi-label for="ck3">
+      <axi-checkbox id="ck3" value="3" v-model-checkbox="ck"></axi-checkbox>
+      <text>第三个</text>
+    </axi-label>
+
+    <text>{{ck}}</text>
+
+    <view>
+      <axi-switch v-model-switch="sw"></axi-switch>
+      <text>{{sw?'true':'false'}}</text>
+    </view>
+
+
+    <axi-select options="{{sel}}" v-model-select="selV"></axi-select>
+
+    <text>{{selV}}</text>
+
+    <axi-pick-date v-model-text="dateV" disabled="{{false}}"></axi-pick-date>
+
+    <text>{{dateV}}</text>
+
+    <axi-pick-time v-model-text="timeV" disabled="{{false}}"></axi-pick-time>
+
+    <text>{{timeV}}</text>
+
+    <axi-image src="https://www.baidu.com/img/baidu_jgylogo3.gif" mode="autoFit"></axi-image>
+
+    <axi-image src="https://www.baidu.com/img/baidu_jgylogo3.gif" mode="scaleToFill" style="width:200px;height:30px;"></axi-image>
+    <axi-image src="https://www.baidu.com/img/baidu_jgylogo3.gif" mode="aspectFill" style="width:200px;height:30px;"></axi-image>
+    <axi-image src="https://www.baidu.com/img/baidu_jgylogo3.gif" mode="aspectFit" style="width:200px;height:30px;"></axi-image>
+
+    <axi-image src="{{imgSrc}}" mode="autoFit"></axi-image>
+
+    <axi-button size="mini" text="登录" style="width: 60px;"></axi-button>
+
+    <view id="ccc" onTap="click">{{ccc}}</view>
+    
+  
+  </axi-refresh>
+
+  <axi-tabbar list="{{tablist}}" current="{{tabIndex}}" onChanged="tabChange"></axi-tabbar>
+  
+</view>

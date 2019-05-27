@@ -1,0 +1,14 @@
+{
+  "name": "axi-dingding",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nandy007",
+  "license": "MIT",
+  "dependencies": {
+    "mini-html-parser2": "^0.1.4"
+  }
+}

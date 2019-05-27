@@ -1,0 +1,7 @@
+<view id="{{id}}" name="{{name}}" class="axi-icon {{className||''}}" style="{{style||''}}" onTap="f">
+  <icon 
+  type="{{type}}" 
+  size="{{size}}"
+  color="{{color}}">
+</icon>
+</view>

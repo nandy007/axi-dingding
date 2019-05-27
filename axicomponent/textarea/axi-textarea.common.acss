@@ -1,0 +1,18 @@
+/* axicomponent/textarea/axi-textarea.wxss */
+
+
+.axi-textarea {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.axi-textarea > text{
+  flex: 1;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+.axi-textarea > textarea{
+  flex: 1;
+}

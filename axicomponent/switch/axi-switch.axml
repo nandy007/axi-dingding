@@ -1,0 +1,4 @@
+<!--axicomponent/switch/axi-switch.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-switch {{className||''}}" style="{{style||''}}" onChange="f" v-model-switch="{{vModelSwitch}}">
+  <switch checked="{{checked}}" color="{{color}}" disabled="{{disabled}}" onChange="changeFunc" />
+</view>

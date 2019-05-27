@@ -1,0 +1,23 @@
+{
+  "usingComponents": {
+    "custom": "/axicomponent/custom/custom",
+    "axi-scroll-view" : "/axicomponent/scroll-view/axi-scroll-view",
+    "axi-icon" : "/axicomponent/icon/axi-icon",
+    "axi-progress" : "/axicomponent/progress/axi-progress",
+    "axi-rich-text" : "/axicomponent/rich-text/axi-rich-text",
+    "axi-button" : "/axicomponent/button/axi-button",
+    "axi-input" : "/axicomponent/input/axi-input",
+    "axi-textarea" : "/axicomponent/textarea/axi-textarea",
+    "axi-radio" : "/axicomponent/radio/axi-radio",
+    "axi-label" : "/axicomponent/label/axi-label",
+    "axi-checkbox" : "/axicomponent/checkbox/axi-checkbox",
+    "axi-switch" : "/axicomponent/switch/axi-switch",
+    "axi-select" : "/axicomponent/picker/axi-select",
+    "axi-pick-date" : "/axicomponent/picker/axi-pick-date",
+    "axi-pick-time" : "/axicomponent/picker/axi-pick-time",
+    "axi-image" : "/axicomponent/image/axi-image",
+    "axi-titlebar" : "/axicomponent/bar/axi-titlebar",
+    "axi-tabbar" : "/axicomponent/bar/axi-tabbar",
+    "axi-refresh" : "/axicomponent/refresh/axi-refresh"
+  }
+}

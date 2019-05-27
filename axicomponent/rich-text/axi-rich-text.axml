@@ -1,0 +1,3 @@
+<view id="{{id}}" name="{{name}}" class="axi-rich-text {{className||''}}" style="{{style||''}}" onTap="f">
+  <rich-text nodes="{{trueNodes}}" />
+</view>

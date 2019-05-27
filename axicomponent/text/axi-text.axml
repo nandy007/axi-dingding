@@ -1,0 +1,13 @@
+<text a:if="{{text}}"
+  selectable="{{selectable}}" 
+  space="{{space}}"
+  class="axi-text">
+  {{text}}
+</text>
+
+<rich-text a:else
+  nodes="{{html}}"
+  space="{{space}}">
+</rich-text>
+
+  

@@ -1,0 +1,11 @@
+/* axicomponent/input/axi-input.wxss */
+.axi-input{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.axi-input input{
+  width: 100%;
+  height: 100%;
+}

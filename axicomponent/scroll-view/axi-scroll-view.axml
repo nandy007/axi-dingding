@@ -1,0 +1,13 @@
+<!--axicomponent/scroll-view/axi-scroll-view.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-scroll-view {{className||''}}" style="{{style||''}}" onTap="f">
+<scroll-view scrollX="{{scrollX}}"
+  scrollY="{{scrollY}}"
+  upperThreshold="{{upperThreshold}}"
+  lowerThreshold="{{lowerThreshold}}"
+  enableBackToTop="{{enableBackToTop}}"
+  scrollWithAnimation="{{scrollWithAnimation}}"
+  scrollIntoView="{{scrollIntoView}}" 
+  onScrollToUpper="scrolltoupperFunc"
+  onScrollToLower="scrolltolowerFunc"
+  onScroll="scrollFunc" class="{{slotClass}}"><slot></slot></scroll-view>
+</view>

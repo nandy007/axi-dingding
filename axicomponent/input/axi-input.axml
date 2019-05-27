@@ -1,0 +1,13 @@
+<!--axicomponent/input/axi-input.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-input {{className||''}}" style="{{style||''}}" onTap="f" v-model-text="{{vModelText}}">
+<input value="{{value||''}}" 
+  type="{{type}}"
+  password="{{password}}"
+  placeholder="{{placeholder}}"
+  disabled="{{disabled}}"
+  maxlength="{{maxlength}}"
+  placeholder-style="{{placeholderColor}}"
+  confirm-type="{{confirmType}}"
+  focus="{{focus}}" onBlur="blurFunc" onFocus="focusFunc" onInput="inputFunc" onConfirm="confirmFunc"></input>
+</view>
+

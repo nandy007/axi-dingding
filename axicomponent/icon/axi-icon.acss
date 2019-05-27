@@ -1,0 +1,6 @@
+/* axicomponent/view/axi-view.wxss */
+.axi-icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}

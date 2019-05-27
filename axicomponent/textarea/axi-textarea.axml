@@ -1,0 +1,11 @@
+<!--axicomponent/textarea/axi-textarea.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-textarea {{className||''}}" style="{{style||''}}" onTap="f" v-model-text="{{vModelText}}">
+<textarea a:if="{{focus}}" value="{{value||''}}" 
+  placeholder="{{placeholder}}"
+  disabled="{{disabled}}"
+  maxlength="{{maxlength}}"
+  placeholder-style="color:{{placeholderColor}};"
+  auto-height="{{autoHeight}}"
+  focus="{{focus}}" onBlur="blurFunc" onFocus="focusFunc" onInput="inputFunc" onConfirm="confirmFunc"></textarea>
+<text a:else catchtap="click" style="color:{{value?'':placeholderColor}};">{{value||placeholder}}</text>
+</view>

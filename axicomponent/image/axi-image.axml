@@ -1,0 +1,6 @@
+<!--axicomponent/image/axi-image.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-image {{className||''}}" style="{{style||''}}" onTap="f">
+<image mode="{{mode}}"
+ src="{{trueSrc}}"
+onError="errorFunc" onLoad="loadFunc" style="width: {{width}}px; height: {{height}}px"></image>
+</view>

@@ -1,0 +1,9 @@
+/* axicomponent/image/axi-image.wxss */
+.axi-image > image{
+  width: 100%;
+  height: 100%;
+}
+
+.axi-image{
+  display: flex;
+}

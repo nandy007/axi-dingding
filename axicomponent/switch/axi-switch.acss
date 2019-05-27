@@ -1,0 +1,6 @@
+/* axicomponent/switch/axi-switch.wxss */
+.axi-switch{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: start;
+}

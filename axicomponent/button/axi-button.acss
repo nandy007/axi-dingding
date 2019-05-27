@@ -1,0 +1,15 @@
+/* axicomponent/view/axi-view.wxss */
+.axi-button{
+    display: flex;
+    box-sizing: border-box;
+}
+  
+.axi-button > button{
+    width: 100%;
+    height: 100%;
+}
+
+.axi-button text{
+  color: #000000;
+}
+  

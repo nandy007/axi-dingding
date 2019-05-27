@@ -1,0 +1,9 @@
+<!--components/RefreshLayout/refresh-layout.wxml-->
+<view class="refresh-view" id="{{id}}">
+  <view style='height:{{dynamicHeight}}rpx;background-color:{{backgroundColor}}' class="refresh-container">
+    <view class='refresh-layout' style='line-height:{{refreshHeight}}rpx;height:{{refreshHeight}}rpx;'>
+      <view class="refresh-status refresh-{{showStatus}}"></view>
+      <text class="refresh-tips">{{pullState==1?'下拉刷新...':pullState==0?'正在刷新...':'释放刷新...'}}</text>
+    </view>
+  </view>
+</view>

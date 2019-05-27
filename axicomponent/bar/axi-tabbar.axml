@@ -1,0 +1,11 @@
+<!--axicomponent/bar/axi-tabbar.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-tabbar {{className||''}}" style="{{style||''}}" onTap="f">
+  <view v-style="border-top-color:{{borderStyle}}; background-color:{{backgroundColor}};" style="border-top-width:1px;border-top-color:#ececec;border-top-style:solid;">
+    <view a:for="{{tablist}}" a:for-item="item" a:for-index="$index" a:key="" class="private-axi-tabbar-item">
+      <view catchTap="selectItem" data-index="{{$index}}">
+        <axi-image src="{{item.src}}" mode="aspectFill"></axi-image>
+        <text style="color:{{item.color}}">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+<view id="{{id}}" name="{{name}}" class="axi-checkbox {{className||''}}" style="{{style||''}}" onChange="f" v-model-checkbox="{{vModelCheckbox}}">
+  <checkbox
+  value="{{value}}"
+  disabled="{{disabled}}"
+  checked="{{checked}}"
+  color="{{color}}"/>
+</view>
+
+
+
+
+
+
+
+
+

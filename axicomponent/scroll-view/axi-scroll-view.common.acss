@@ -1,0 +1,19 @@
+/* axicomponent/scroll-view/axi-scroll-view.wxss */
+.axi-scroll-view{
+  display: flex;
+  box-sizing: border-box;
+  height: 100%;
+  position: relative;
+}
+.axi-scroll-view > scroll-view{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.axi-scroll-view ::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}

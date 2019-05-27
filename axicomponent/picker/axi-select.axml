@@ -1,0 +1,14 @@
+<!--axicomponent/picker/axi-select.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-select {{className||''}}" style="{{style||''}}" onChange="f" v-model-select="{{vModelSelect}}">
+  <picker range-key="text" 
+  disabled="{{disabled}}"
+  value="{{index}}"
+  range="{{range}}"
+  onChange="change"
+  >
+    <view>
+      {{showText}}
+    </view>
+  </picker>
+</view>
+

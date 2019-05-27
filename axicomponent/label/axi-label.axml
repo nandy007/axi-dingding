@@ -1,0 +1,6 @@
+<!--axicomponent/label/axi-label.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-label {{className||''}}" style="{{style||''}}" onTap="f">
+  <view class="axi-label-slot {{slotClass}}">
+    <slot></slot>
+  </view>
+</view>

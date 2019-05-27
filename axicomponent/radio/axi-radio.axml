@@ -1,0 +1,8 @@
+<!--axicomponent/radio/axi-radio.wxml-->
+<view id="{{id}}" name="{{name}}" class="axi-radio {{className||''}}" style="{{style||''}}" onChange="f" v-model-radio="{{vModelRadio}}">
+<radio
+  value="{{value}}" id="{{name}}"
+  disabled="{{disabled}}"
+  checked="{{checked}}"
+  color="{{color}}"/>
+</view>

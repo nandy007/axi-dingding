@@ -1,0 +1,6 @@
+/* axicomponent/label/axi-label.wxss */
+.axi-label > .axi-label-slot{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

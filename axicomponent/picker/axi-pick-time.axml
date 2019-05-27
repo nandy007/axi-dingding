@@ -1,0 +1,17 @@
+<view id="{{id}}" name="{{name}}" class="axi-pick-time {{className||''}}" style="{{style||''}}" onTap="f" v-model-text="{{vModelText}}">
+
+<!-- <picker
+  mode='time'
+  value="{{value}}" 
+  start="{{start}}"
+  end="{{end}}"
+  disabled="{{disabled}}"
+  catchchange="bindchangeFunc"
+  bindcancel="bindcancelFunc"
+> -->
+  <text>{{showText}}</text>
+</view> 
+
+
+
+  
