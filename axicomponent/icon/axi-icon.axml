@@ -1,5 +1,5 @@
 <view id="{{id}}" name="{{name}}" class="axi-icon {{className||''}}" style="{{style||''}}" onTap="f">
-  <icon 
+  <icon a:if="{{type}}"
   type="{{type}}" 
   size="{{size}}"
   color="{{color}}">

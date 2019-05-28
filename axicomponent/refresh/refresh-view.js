@@ -151,7 +151,7 @@ ComponentWrapper({
     },
     //是否是安卓平台
     _isAndriod() {
-      return ['iPhone', 'iPad'].indexOf(platform)===-1;
+      return ['iphone', 'ipad', 'ios'].indexOf(platform.toLowerCase())===-1;
     },
     //下拉状态监听
     _pullStateChange(state, dynamicHeight) {
