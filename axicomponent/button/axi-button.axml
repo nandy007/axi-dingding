@@ -1,6 +1,6 @@
 <!--axicomponent/view/axi-button.wxml-->
 <view id="{{id}}" name="{{name}}" class="axi-button {{className||''}}" style="{{style||''}}" onTap="f">
-<button size="{{size}}" 
+<button size="{{size}}" class="axi-private-button {{slotClass}}"
   type="{{type}}"
   plain="{{plain}}"
   disabled="{{disabled}}" 

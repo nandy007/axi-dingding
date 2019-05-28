@@ -1,1 +1,4 @@
 /* axicomponent/radio/axi-radio.wxss */
+.axi-radio{
+    padding: 1px;
+  }

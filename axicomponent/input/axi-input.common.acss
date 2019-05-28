@@ -3,7 +3,8 @@
   width: 100%;
   height: 30px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row !important;
+  align-items: center;
 }
 .axi-input input{
   width: 100%;

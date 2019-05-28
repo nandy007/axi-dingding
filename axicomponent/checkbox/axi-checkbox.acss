@@ -1,1 +1,4 @@
 /* axicomponent/view/axi-view.wxss */
+.axi-checkbox{
+    padding: 1px;
+  }
