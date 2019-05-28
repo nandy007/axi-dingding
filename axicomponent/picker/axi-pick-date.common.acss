@@ -1,6 +1,6 @@
 .axi-pick-date{
   display: flex;
-  flex-direction: row;
+  flex-direction: row !important;
   align-items: center;
   width:100%;
   height: 30px;

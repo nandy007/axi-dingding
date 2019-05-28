@@ -4,4 +4,5 @@ view{
     position: relative;
     box-sizing: border-box;
     text-align: left;
+    overflow: auto !important;
 }

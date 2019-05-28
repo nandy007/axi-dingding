@@ -14,12 +14,35 @@ const util = {
     return Math.round(new Date().getTime() / 1000);
   },
   wrapMethods(src, target, isPage) {
-    if (!isPage) {
-      src = src.methods || {};
-      target = target.methods = target.methods || {};
+    const srcCopy = src, targetCopy = target;
+    src = src.methods || {};
+    target = target.methods = target.methods || {};
+
+    if (isPage) {
+      for(let k in srcCopy){
+        const func = srcCopy[k];
+        if(typeof func!=='function') continue;
+        const tFunc = targetCopy[k];
+        if(tFunc) continue;
+        targetCopy[k] = function(){
+          const comp = this.component;
+          return func.apply(comp, arguments);
+        };
+      }
+      for(let k in src){
+        const func = src[k];
+        const tFunc = targetCopy[k];
+        targetCopy[k] = function(){
+          const comp = this.component;
+          tFunc && tFunc.apply(comp, arguments);
+          return func.apply(comp, arguments);
+        };
+      }
+    }else{
       // 公共事件
       const f = src.f;
       src.f = function (e) {
+        if(this.ctx.props.disabled) return;
         const rs = f && f.call(this, e);
         this.triggerEvent(e.type, e.detail, e);
         return rs;
@@ -481,7 +504,7 @@ class PageCache {
   constructor(ctx, pageParams, absolutePath) {
     this.ctx = ctx;
     this.pageParams = pageParams;
-    this.absolutePath = this.absolutePath;
+    this.absolutePath = absolutePath;
 
     this.initSelector();
   }

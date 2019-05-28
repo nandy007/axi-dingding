@@ -1,6 +1,6 @@
 <!--components/RefreshView/axi-refresh.wxml-->
 <view id="{{id}}" name="{{name}}" class="axi-refresh {{className||''}}" style="{{style||''}}" onTap="f">
-<scroll-view scroll-y="true" onScroll="onScroll" onScrolltolower="onScrollLower" style="width: 100%; position:absolute;top:0;right:0;bottom:0;left:0;">
+<scroll-view scroll-y="true" onScroll="onScroll" onScrollToLower="onScrollLower" style="width: 100%; position:absolute;top:0;right:0;bottom:0;left:0;">
   <refresh-view id='{{refreshId}}' onOnRefresh="onPullDownRefresh" />
   <view class="refresh-container" onToucStart='handletouchstart' onTouchMove='handletouchmove' onTouchEnd='handletouchend' onTouchCancel='handletouchcancel'>
     <view class="refresh-content {{slotClass}}"><slot></slot></view>

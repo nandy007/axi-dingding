@@ -12,7 +12,7 @@ ComponentWrapper({
       observer: function (v) {
         var rs = v || '';
         if (rs.indexOf('http://') !== 0 && rs.indexOf('https://') !== 0) {
-          rs = v ? ComponentWrapper.getAbsolute(v) : '';
+          rs = v ? this.getAbsolute(v) : '';
         }
         // console.log(rs)
         this.setData({
