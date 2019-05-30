@@ -6,6 +6,7 @@ function getRefreshId(){
   return '__refresh_id_' + (idIndex++) + '__';
 }
 
+
 ComponentWrapper({
   /**
    * 组件的属性列表
@@ -43,13 +44,11 @@ ComponentWrapper({
     },
     //触摸移动
     handletouchmove: function (event) {
-      const refreshView = this.getRefreshView();
-      refreshView.handletouchmove(event);
+      this.getRefreshView().handletouchmove(event);
     },
     //触摸结束
     handletouchend: function (event) {
-      const refreshView = this.getRefreshView();
-      refreshView.handletouchend(event);
+      this.getRefreshView().handletouchend(event);
     },
     //触摸取消
     handletouchcancel: function (event) {

@@ -52,14 +52,18 @@ PageWrapper({
       e.detail.refresh()
     }, 3000);
   },
+  move: function(e){
+    console.log(e.type)
+  },
   click: function(e){
+    console.log(22222)
     this.setData({
       ccc: 'ddd',
       top: '20',
       percent: 80,
       iptVal: '2222'
     });
-    console.log(this.data.ck)
+    console.log(3333, this.data.ck)
   },
   tabChange: function(e){
     // console.log(e)

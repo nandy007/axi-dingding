@@ -5,7 +5,7 @@ const PULL_DEFAULT = -1 //默认
 const PULL_LT_HEIGHT = 1 //下拉小于高度
 const PULL_GT_HEIGHT = 2 //下拉大于高度
 const PULL_REFRESHING = 0 //刷新中
-let platform = 'iPhone', scale = 375/ my.getSystemInfoSync().windowWidth*2
+let scale = 0;
 ComponentWrapper({
   options: {
     addGlobalClass: true
@@ -16,7 +16,7 @@ ComponentWrapper({
   properties: {
     backgroundColor: {
       type: String,
-      value: "#fff"
+      value: "white"
     },
     refreshHeight: {
       type: Number,
@@ -43,7 +43,6 @@ ComponentWrapper({
    */
   created: function() {
     var info = my.getSystemInfoSync();
-    platform = info.platform
     scale =  info.windowWidth / 375 *2
   },
   attached: function() {},
@@ -66,10 +65,8 @@ ComponentWrapper({
       this.setData({
         pullState: PULL_DEFAULT,
         dynamicHeight: 0
-      }, () => {
-        my.pageScrollTo({scrollTop: 0,duration: 0})
-      })
-
+      });
+      my.pageScrollTo({scrollTop: 0,duration: 0});
     },
     //是否正在刷新
     isRefreshing() {
@@ -85,12 +82,13 @@ ComponentWrapper({
     },
     //页面触摸移动事件，必须在触摸开始方法中调用此方法
     handletouchmove: function(event) {
-      let pageY = event.touches[0].pageY
+      // let pageY = event.touches[0].pageY
       let clientY = event.touches[0].clientY
       let offsetY = clientY - lastY
+      // console.log(offsetY)
       if (this.data.scrollTop > 0 || offsetY < 0) return
       // if (0 == this.data.pullState) return
-      let dynamicHeight = this.data.dynamicHeight + offsetY
+      let dynamicHeight = offsetY
 
       if (dynamicHeight > this.data.refreshHeight) {
         this._pullStateChange( (0 == this.data.pullState)?0:PULL_GT_HEIGHT, dynamicHeight)
@@ -98,7 +96,7 @@ ComponentWrapper({
         dynamicHeight = dynamicHeight < 0 ? 0 : dynamicHeight //如果动态高度小于0处理
         this._pullStateChange((0 == this.data.pullState) ? 0 :PULL_LT_HEIGHT, dynamicHeight)
       }
-      lastY = event.touches[0].clientY
+      // lastY = event.touches[0].clientY
     },
     //页面触摸结束事件，必须在触摸开始方法中调用此方法
     handletouchend: function(event) {
@@ -135,9 +133,9 @@ ComponentWrapper({
     },
     //页面滚动
     onPageScroll: function(event) {
-      if (event.scrollTop > 0 && PULL_DEFAULT != this.data.pullState) {
+      if (event.detail.scrollTop > 0 && PULL_DEFAULT != this.data.pullState) {
         //2 * this.data.scrollTop 两倍表示px转rpx，  所以这里必须进行单位转换
-        if (this.data.dynamicHeight - scale * event.scrollTop < this.data.refreshHeight) {
+        if (this.data.dynamicHeight - scale * event.detail.scrollTop < this.data.refreshHeight) {
           this.setData({
             pullState: PULL_LT_HEIGHT
           })
@@ -147,11 +145,7 @@ ComponentWrapper({
           })
         }
       }
-      this.data.scrollTop = event.scrollTop
-    },
-    //是否是安卓平台
-    _isAndriod() {
-      return ['iphone', 'ipad', 'ios'].indexOf(platform.toLowerCase())===-1;
+      this.data.scrollTop = event.detail.scrollTop
     },
     //下拉状态监听
     _pullStateChange(state, dynamicHeight) {
@@ -162,7 +156,7 @@ ComponentWrapper({
         rs = 'loading';
       }
 
-
+      // console.log(rs, state, dynamicHeight)
       this.setData({showStatus: rs, pullState: state,dynamicHeight: dynamicHeight})
       this.triggerEvent("onPullState");
 
