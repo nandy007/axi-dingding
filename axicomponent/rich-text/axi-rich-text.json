@@ -1,3 +1,6 @@
 {
-  "component": true
+  "component": true,
+  "usingComponents": {
+    "axi-dd-rich-text": "./rich-text"
+  }
 }

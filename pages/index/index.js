@@ -1,5 +1,5 @@
 const PageWrapper = require('../../axicomponent/Base.js')(Page, '', '/pages/index/index').Page;
-
+var article = '<p><div>1.绘制命令和修改</div><div>1.绘制命令和修改</div><div>1.绘制命令和修改</div></p>';
 PageWrapper({
   data: {
     imgSrc: '',
@@ -12,7 +12,7 @@ PageWrapper({
     cn: 'test',
     percent: 20,
     nodes: [],
-    nodeStr: '<span style="color:red">wwwww</span>',
+    nodeStr: article,//'<span style="color:red" class="ttt">wwwww</span><img src="https://www.baidu.com/img/baidu_jgylogo3.gif">',
     iptVal: '111',
     textarea: '',
     rd: '1',

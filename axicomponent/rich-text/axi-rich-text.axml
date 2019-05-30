@@ -1,3 +1,4 @@
 <view id="{{id}}" name="{{name}}" class="axi-rich-text {{className||''}}" style="{{style||''}}" onTap="f">
-  <rich-text nodes="{{trueNodes}}" />
+  <axi-dd-rich-text a:if="{{core==='dd'}}" nodes="{{trueNodes}}" />
+  <rich-text a:else nodes="{{trueNodes}}" />
 </view>
