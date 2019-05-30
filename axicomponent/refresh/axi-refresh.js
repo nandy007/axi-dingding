@@ -1,5 +1,5 @@
 // components/RefreshView/axi-refresh.js
-const ComponentWrapper = require('../Base.js')(Component, 'axi-radio').Component;
+const ComponentWrapper = require('../Base.js')(Component, 'axi-refresh').Component;
 
 var idIndex = 0;
 function getRefreshId(){
