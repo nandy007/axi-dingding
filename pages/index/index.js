@@ -1,5 +1,5 @@
 const PageWrapper = require('../../axicomponent/Base.js')(Page, '', '/pages/index/index').Page;
-var article = '<p><div>1.绘制命令和修改</div><div>1.绘制命令和修改</div><div>1.绘制命令和修改</div></p>';
+var article = '<p><div style="color:red">1.绘制命<i>fsdsd</i>令和修改</div><div>1.绘制命令和修改</div><div>1.绘制命令和修改</div></p>';
 PageWrapper({
   data: {
     imgSrc: '',

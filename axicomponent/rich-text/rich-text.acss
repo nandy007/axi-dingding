@@ -1,33 +1,50 @@
+.axi-dd-rt-view{
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  flex: none;
+  width: 100%;
+  color: inherit;
+  font-size: inherit;
+}
+
 .axi-dd-rt-text{
   display: inline-flex;
+  color: inherit;
+  font-size: inherit;
 }
 
 .axi-dd-rt-h1{
-  font-size: 50px;
-  font-weight: bold;
-}
-
-.axi-dd-rt-h2{
   font-size: 40px;
   font-weight: bold;
 }
 
+.axi-dd-rt-h2{
+  font-size: 32px;
+  font-weight: bold;
+}
+
 .axi-dd-rt-h3{
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
 }
 
 .axi-dd-rt-h4{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
 }
 
 .axi-dd-rt-h5{
-  font-size: 10px;
+  font-size: 8px;
 }
 
 .axi-dd-rt-i{
   font-style: italic;
 }
+
+.axi-dd-rt-b{
+  font-weight: bold;
+}
+
 
 

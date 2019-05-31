@@ -6,20 +6,16 @@
 </template>
 
 <template name="rtview">
-  <view class="axi-dd-rt-{{item.c}} {{item.attrs.class||''}}" style="{{item.attrs.style||''}}">
+  <view class="axi-dd-rt-view axi-dd-rt-{{item.c}} {{item.attrs.class||''}}" style="{{item.attrs.style||''}}">
     <template is="rtNodes" data="{{trueNodes:item.children}}"></template>
   </view>
 </template>
 
 <template name="rttext">
-  <text a:if="{{item.attrs||item.c}}" class="axi-dd-rt-{{item.c||'text'}} {{item.attrs.class||''}}" style="{{item.attrs.style||''}}">
+  <text class="axi-dd-rt-text axi-dd-rt-{{item.c||'text'}} {{item.attrs.class||''}}" style="{{item.attrs.style||''}}">
     {{item.text}}
     <template is="rtNodes" data="{{trueNodes:item.children}}"></template>
   </text>
-  <block a:else="">
-    {{item.text}}
-    <template is="rtNodes" data="{{trueNodes:item.children}}"></template>
-  </block>
 </template>
 
 <template name="rtimg">

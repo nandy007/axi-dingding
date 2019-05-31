@@ -29,7 +29,7 @@ const inline = {
     for(let i=0, len=nodes.length;i<len;i++){
       const node = nodes[i];
       if(node.type==='text'){
-        arr.push(node.text);
+        arr.push(util.strDiscode(node.text||''));
         inline.getText(node.children||[], arr);
       }
     }
@@ -39,8 +39,9 @@ const inline = {
     const children = node.children || [];
     delete node.children;
     // node.children = inline.getText(children);
-    node.name = 'text';
-    node.text = inline.getText(children);
+    delete node.name;
+    node.type = 'text';
+    node.text = inline.getText(children).join('');
   },
   def: "abbr,acronym,applet,b,basefont,bdo,big,button,cite,del,dfn,em,font,i,iframe,input,ins,kbd,label,map,object,q,s,samp,script,select,small,span,strike,strong,sub,sup,textarea,tt,u,var"
 };
@@ -117,7 +118,7 @@ ComponentWrapper({
         }
         parse(v||'', (err, nodes) => {
           nodes = loopNodes(nodes || [], this);
-          // console.log(nodes)
+          console.log(nodes)
           // nodes数据的变更必须使用原生的setData
           this.setData({
             trueNodes: nodes,
